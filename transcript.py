@@ -2,13 +2,14 @@ import speech_recognition as sr
 from os import path
 from pydub import AudioSegment
 
+song = input("What's the file name? ")
 # convert mp3 file to wav                                                       
-sound = AudioSegment.from_mp3("ikp.mp3")
-sound.export("ikp.wav", format="wav")
+sound = AudioSegment.from_mp3(song)
+sound.export(song.wav, format="wav")
 
 
 # transcribe audio file                                                         
-AUDIO_FILE = "ikp.wav"
+AUDIO_FILE = song.wav
 
 # use the audio file as the audio source                                        
 r = sr.Recognizer()
