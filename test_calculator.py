@@ -1,3 +1,5 @@
+import pytest
+
 from calculator2 import square
 
 def main():
@@ -11,5 +13,11 @@ def test_square():
         except AssertionError:
             print(i,"does not equal", i * i)
 
+
 if __name__ == '__main__':
-    main()                                                            
+    main()                  
+
+def test_str():
+    pytest.raises                                          
+    
+
